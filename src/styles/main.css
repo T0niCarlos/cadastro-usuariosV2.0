@@ -98,6 +98,25 @@ button[type="submit"]:hover, button[type="button"]:hover {
   transform: translateY(-2px);
 }
 
+/* Search Input */
+input[type="text"].search-input {
+  width: 100%; /* Ocupa 100% da largura do contêiner */
+  max-width: 800px; /* Ajusta o máximo para 800px */
+  padding: 12px; /* Padding ajustado */
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9; /* Fundo suave */
+  box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"].search-input:focus {
+  border-color: #00aaff; /* Azul claro ao focar */
+  outline: none;
+}
+
 /* Table Styles */
 .table-responsive {
   overflow-x: auto; /* Permite rolagem horizontal */
@@ -209,30 +228,33 @@ table tr:hover {
   fill: #008fcc; /* Cor do ícone ao passar o mouse */
 }
 
-/* Search Input */
-input[type="text"] {
-  width: 100%; /* Ocupa 100% da largura do contêiner */
-  max-width: 800px; /* Aumenta o máximo para 800px */
-  padding: 20px; /* Padding aumentado */
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
+/* Card Styles for Mobile */
+.card {
+  border: 1px solid #ddd;
   border-radius: 8px;
-  background-color: #f9f9f9; /* Fundo suave */
-  box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.05);
+  padding: 15px;
+  margin-bottom: 15px;
+  background-color: #fff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Media Queries */
-@media (max-width: 1200px) {
-  .container {
-    max-width: 900px;
-  }
+.card-header {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
 
-  .form-group input[type="text"],
-  .form-group input[type="date"],
-  .form-group select,
-  .form-group input[type="file"] {
-    max-width: 700px; /* Ajuste para telas grandes */
-  }
+.card-content {
+  font-size: 16px;
+}
+
+/* Mobile Styles for ListaUsuarios */
+.card-list {
+  display: none; /* Oculta a lista de cartões por padrão */
+}
+
+.table-responsive {
+  overflow-x: auto; /* Permite rolagem horizontal */
 }
 
 @media (max-width: 992px) {
@@ -243,8 +265,48 @@ input[type="text"] {
   .form-group input[type="text"],
   .form-group input[type="date"],
   .form-group select,
-  .form-group input[type="file"] {
+  .form-group input[type="file"],
+  input[type="text"].search-input {
     max-width: 600px; /* Ajuste para telas médias */
+  }
+
+  button[type="submit"], button[type="button"] {
+    width: 90%; /* Botões ocupam toda a largura disponível */
+    padding: 14px; /* Ajusta o padding */
+  }
+
+  .table-responsive {
+    padding: 0 15px; /* Adiciona padding horizontal para melhorar a aparência em telas pequenas */
+  }
+
+  .table-actions {
+    flex-direction: column; /* Ações em coluna para telas menores */
+  }
+
+  .actions {
+    flex-direction: column; /* Alinha botões em coluna */
+  }
+
+  /* Tabela em cartões para mobile */
+  table {
+    display: none; /* Oculta a tabela em dispositivos móveis */
+  }
+
+  .card-list {
+    display: block;
+  }
+
+  .card {
+    margin: 0;
+    border: none;
+  }
+
+  .card-header {
+    font-size: 16px;
+  }
+
+  .card-content {
+    font-size: 14px;
   }
 }
 
@@ -257,7 +319,8 @@ input[type="text"] {
   .form-group input[type="text"],
   .form-group input[type="date"],
   .form-group select,
-  .form-group input[type="file"] {
+  .form-group input[type="file"],
+  input[type="text"].search-input {
     max-width: 450px; /* Ajuste para telas pequenas */
   }
 
@@ -273,6 +336,28 @@ input[type="text"] {
   .actions {
     flex-direction: column; /* Alinha botões em coluna */
   }
+
+  /* Tabela em cartões para mobile */
+  table {
+    display: none; /* Oculta a tabela em dispositivos móveis */
+  }
+
+  .card-list {
+    display: block;
+  }
+
+  .card {
+    margin: 0;
+    border: none;
+  }
+
+  .card-header {
+    font-size: 16px;
+  }
+
+  .card-content {
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -284,7 +369,8 @@ input[type="text"] {
   .form-group input[type="text"],
   .form-group input[type="date"],
   .form-group select,
-  .form-group input[type="file"] {
+  .form-group input[type="file"],
+  input[type="text"].search-input {
     max-width: 100%; /* Ocupa toda a largura em telas muito pequenas */
   }
 
@@ -294,5 +380,27 @@ input[type="text"] {
 
   .actions {
     gap: 10px; /* Diminui o espaçamento entre os botões */
+  }
+
+  /* Tabela em cartões para mobile */
+  table {
+    display: none; /* Oculta a tabela em dispositivos móveis */
+  }
+
+  .card-list {
+    display: block;
+  }
+
+  .card {
+    margin: 0;
+    border: none;
+  }
+
+  .card-header {
+    font-size: 14px;
+  }
+
+  .card-content {
+    font-size: 12px;
   }
 }

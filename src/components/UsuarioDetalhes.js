@@ -83,8 +83,8 @@ function UsuarioDetalhes({ usuarios, onEdit }) {
           <input type="file" name="arquivoPDF" accept=".pdf" onChange={handleChange} required />
         </div>
         <div className="form-group">
-          <label>Anexar TXT:</label>
-          <input type="file" name="arquivoTXT" accept=".txt" onChange={handleChange} required />
+          <label>Anexar Imagem:</label>
+          <input type="file" name="arquivoJPEG" accept=".jpg, .jpeg" onChange={handleChange} required />
         </div>
         <button type="submit">Salvar Alterações</button>
       </form>

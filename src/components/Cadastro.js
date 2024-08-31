@@ -10,7 +10,7 @@ function Cadastro({ onSubmit }) {
     estadoCivil: 'solteiro',
     telefone: '',
     arquivoPDF: null,
-    arquivoTXT: null,
+    arquivoJPEG: null, // Alterado para arquivoJPEG
   });
 
   const navigate = useNavigate();
@@ -28,8 +28,8 @@ function Cadastro({ onSubmit }) {
     e.preventDefault();
 
     // Verifica se ambos os arquivos foram anexados
-    if (!formData.arquivoPDF || !formData.arquivoTXT) {
-      alert('Por favor, anexe ambos os arquivos PDF e TXT.');
+    if (!formData.arquivoPDF || !formData.arquivoJPEG) {
+      alert('Por favor, anexe ambos os arquivos PDF e JPEG.');
       return;
     }
 
@@ -122,11 +122,11 @@ function Cadastro({ onSubmit }) {
           />
         </div>
         <div className="form-group">
-          <label>Anexar TXT:</label>
+          <label>Anexar Imagem:</label>
           <input 
             type="file" 
-            name="arquivoTXT" 
-            accept=".txt" 
+            name="arquivoJPEG" 
+            accept=".jpg, .jpeg" // Atualizado para aceitar JPEG e JPG
             onChange={handleChange} 
             required 
           />
