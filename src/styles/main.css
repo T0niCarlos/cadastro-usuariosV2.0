@@ -1,0 +1,298 @@
+/* Global Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #e3ebf2; /* Azul bem claro */
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* Headers */
+h1, h2 {
+  color: #222;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Header */
+header {
+  background-color: rgba(0, 170, 255, 0.9); /* Azul com transparência */
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 0 0 10px 10px;
+}
+
+/* Container */
+.container {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.95); /* Branco com transparência */
+  border-radius: 12px;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15);
+  overflow-x: auto; /* Permite rolagem horizontal */
+}
+
+/* Page Styles */
+.page {
+  margin: 20px auto;
+  padding: 20px;
+  text-align: center; /* Centraliza o conteúdo */
+}
+
+/* Form Styles */
+form {
+  display: grid;
+  grid-gap: 20px;
+  justify-items: center; /* Centraliza o formulário */
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+  font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="date"],
+.form-group select,
+.form-group input[type="file"] {
+  width: 100%; /* Ocupa 100% da largura do contêiner */
+  max-width: 800px; /* Aumenta o máximo para 800px */
+  padding: 10px; /* Padding aumentado */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  background-color: #f9f9f9; /* Fundo suave */
+  box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.05);
+  transition: border-color 0.3s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="date"]:focus,
+.form-group select:focus,
+.form-group input[type="file"]:focus {
+  border-color: #00aaff; /* Azul claro ao focar */
+  outline: none;
+}
+
+/* Button Styles */
+button[type="submit"], button[type="button"] {
+  background-color: #00aaff; /* Azul bem claro */
+  color: #fff;
+  padding: 16px 32px; /* Padding aumentado */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+button[type="submit"]:hover, button[type="button"]:hover {
+  background-color: #008fcc; /* Azul um pouco mais escuro */
+  transform: translateY(-2px);
+}
+
+/* Table Styles */
+.table-responsive {
+  overflow-x: auto; /* Permite rolagem horizontal */
+  -webkit-overflow-scrolling: touch; /* Suporte para scroll suave em dispositivos móveis */
+  margin-top: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  table-layout: auto; /* Mantém o layout da tabela flexível */
+}
+
+table th, table td {
+  padding: 14px 18px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  white-space: nowrap; /* Evita que o conteúdo quebre para a próxima linha */
+}
+
+table th {
+  background-color: #00aaff; /* Azul bem claro */
+  color: #fff;
+  position: sticky; /* Fixa o cabeçalho no topo durante o scroll */
+  top: 0;
+}
+
+table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Action Buttons */
+.actions {
+  display: flex;
+  justify-content: center; /* Centraliza os botões */
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.actions button {
+  background-color: #00aaff; /* Azul bem claro */
+  color: #fff;
+  padding: 12px 24px; /* Padding ajustado */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.actions button:hover {
+  background-color: #008fcc; /* Azul um pouco mais escuro */
+  transform: translateY(-2px);
+}
+
+/* Botão de Exclusão */
+.button-delete {
+  background-color: #ff4d4d; /* Vermelho */
+  color: #fff;
+  padding: 12px 24px; /* Padding ajustado */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 10px; /* Espaçamento ao redor do botão */
+}
+
+.button-delete:hover {
+  background-color: #e60000; /* Vermelho escuro */
+  transform: translateY(-2px);
+}
+
+/* Table Action Buttons */
+.table-actions {
+  display: flex;
+  gap: 20px; /* Espaçamento entre os botões de ação */
+}
+
+.table-actions a {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Espaçamento entre o ícone e o texto */
+  text-decoration: none;
+  color: #00aaff; /* Azul claro */
+  font-weight: bold;
+}
+
+.table-actions a:hover {
+  color: #008fcc; /* Azul mais escuro ao passar o mouse */
+}
+
+.table-actions a svg {
+  width: 18px;
+  height: 18px;
+  fill: #00aaff; /* Cor do ícone */
+  transition: fill 0.3s ease;
+}
+
+.table-actions a:hover svg {
+  fill: #008fcc; /* Cor do ícone ao passar o mouse */
+}
+
+/* Search Input */
+input[type="text"] {
+  width: 100%; /* Ocupa 100% da largura do contêiner */
+  max-width: 800px; /* Aumenta o máximo para 800px */
+  padding: 20px; /* Padding aumentado */
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9; /* Fundo suave */
+  box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+  .container {
+    max-width: 900px;
+  }
+
+  .form-group input[type="text"],
+  .form-group input[type="date"],
+  .form-group select,
+  .form-group input[type="file"] {
+    max-width: 700px; /* Ajuste para telas grandes */
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 750px;
+  }
+
+  .form-group input[type="text"],
+  .form-group input[type="date"],
+  .form-group select,
+  .form-group input[type="file"] {
+    max-width: 600px; /* Ajuste para telas médias */
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 600px;
+    padding: 15px;
+  }
+
+  .form-group input[type="text"],
+  .form-group input[type="date"],
+  .form-group select,
+  .form-group input[type="file"] {
+    max-width: 450px; /* Ajuste para telas pequenas */
+  }
+
+  button[type="submit"], button[type="button"] {
+    width: 90%; /* Botões ocupam toda a largura disponível */
+    padding: 14px; /* Ajusta o padding */
+  }
+
+  .table-actions {
+    flex-direction: column; /* Ações em coluna para telas menores */
+  }
+
+  .actions {
+    flex-direction: column; /* Alinha botões em coluna */
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .form-group input[type="text"],
+  .form-group input[type="date"],
+  .form-group select,
+  .form-group input[type="file"] {
+    max-width: 100%; /* Ocupa toda a largura em telas muito pequenas */
+  }
+
+  .table-actions {
+    gap: 10px; /* Diminui o espaçamento entre as ações */
+  }
+
+  .actions {
+    gap: 10px; /* Diminui o espaçamento entre os botões */
+  }
+}
